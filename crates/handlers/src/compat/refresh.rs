@@ -13,6 +13,7 @@ use mas_storage::{
     BoxClock, BoxRepository, BoxRng, Clock,
     compat::{CompatAccessTokenRepository, CompatRefreshTokenRepository, CompatSessionRepository},
 };
+use opentelemetry::trace::Status;
 use serde::{Deserialize, Serialize};
 use serde_with::{DurationMilliSeconds, serde_as};
 use thiserror::Error;
@@ -52,7 +53,17 @@ impl IntoResponse for RouteError {
                 error: "Internal error",
                 status: StatusCode::INTERNAL_SERVER_ERROR,
             },
-            Self::InvalidToken | Self::InvalidSession | Self::RefreshTokenConsumed => MatrixError {
+            Self::InvalidSession => MatrixError {
+                errcode: "M_UNKNOWN_SESSION",
+                error: "Invalid session",
+                status: StatusCode::UNAUTHORIZED
+            },
+            Self::RefreshTokenConsumed => MatrixError {
+                errcode: "M_TOKEN_CONSUMED",
+                error: "Invalid session",
+                status: StatusCode::UNAUTHORIZED
+            },
+            Self::InvalidToken => MatrixError {
                 errcode: "M_UNKNOWN_TOKEN",
                 error: "Invalid refresh token",
                 status: StatusCode::UNAUTHORIZED,
