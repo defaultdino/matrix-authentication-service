@@ -13,7 +13,6 @@ use mas_storage::{
     BoxClock, BoxRepository, BoxRng, Clock,
     compat::{CompatAccessTokenRepository, CompatRefreshTokenRepository, CompatSessionRepository},
 };
-use opentelemetry::trace::Status;
 use serde::{Deserialize, Serialize};
 use serde_with::{DurationMilliSeconds, serde_as};
 use thiserror::Error;
