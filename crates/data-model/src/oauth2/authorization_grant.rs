@@ -22,7 +22,7 @@ use ulid::Ulid;
 use url::Url;
 
 use super::session::Session;
-use crate::{InvalidTransitionError, UlidExt as _};
+use crate::{BrowserSession, InvalidTransitionError, UlidExt as _};
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize)]
 pub struct Pkce {
@@ -62,11 +62,12 @@ pub enum AuthorizationGrantStage {
     #[default]
     Pending,
     Fulfilled {
-        session_id: Ulid,
+        browser_session_id: Ulid,
         fulfilled_at: DateTime<Utc>,
     },
     Exchanged {
         session_id: Ulid,
+        browser_session_id: Ulid,
         fulfilled_at: DateTime<Utc>,
         exchanged_at: DateTime<Utc>,
     },
@@ -84,26 +85,31 @@ impl AuthorizationGrantStage {
     fn fulfill(
         self,
         fulfilled_at: DateTime<Utc>,
-        session: &Session,
+        browser_session: &BrowserSession,
     ) -> Result<Self, InvalidTransitionError> {
         match self {
             Self::Pending => Ok(Self::Fulfilled {
                 fulfilled_at,
-                session_id: session.id,
+                browser_session_id: browser_session.id,
             }),
             _ => Err(InvalidTransitionError),
         }
     }
 
-    fn exchange(self, exchanged_at: DateTime<Utc>) -> Result<Self, InvalidTransitionError> {
+    fn exchange(
+        self,
+        exchanged_at: DateTime<Utc>,
+        session: &Session,
+    ) -> Result<Self, InvalidTransitionError> {
         match self {
             Self::Fulfilled {
                 fulfilled_at,
-                session_id,
+                browser_session_id,
             } => Ok(Self::Exchanged {
                 fulfilled_at,
                 exchanged_at,
-                session_id,
+                session_id: session.id,
+                browser_session_id,
             }),
             _ => Err(InvalidTransitionError),
         }
@@ -178,8 +184,12 @@ impl AuthorizationGrant {
     /// Returns an error if the authorization grant is not [`Fulfilled`].
     ///
     /// [`Fulfilled`]: AuthorizationGrantStage::Fulfilled
-    pub fn exchange(mut self, exchanged_at: DateTime<Utc>) -> Result<Self, InvalidTransitionError> {
-        self.stage = self.stage.exchange(exchanged_at)?;
+    pub fn exchange(
+        mut self,
+        exchanged_at: DateTime<Utc>,
+        session: &Session,
+    ) -> Result<Self, InvalidTransitionError> {
+        self.stage = self.stage.exchange(exchanged_at, session)?;
         Ok(self)
     }
 
@@ -193,9 +203,9 @@ impl AuthorizationGrant {
     pub fn fulfill(
         mut self,
         fulfilled_at: DateTime<Utc>,
-        session: &Session,
+        browser_session: &BrowserSession,
     ) -> Result<Self, InvalidTransitionError> {
-        self.stage = self.stage.fulfill(fulfilled_at, session)?;
+        self.stage = self.stage.fulfill(fulfilled_at, browser_session)?;
         Ok(self)
     }
 
