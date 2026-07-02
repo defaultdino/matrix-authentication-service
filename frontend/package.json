@@ -26,7 +26,7 @@
     "@tanstack/react-router": "^1.170.16",
     "@vector-im/compound-design-tokens": "10.2.0",
     "@vector-im/compound-web": "^9.3.0",
-    "@zxcvbn-ts/core": "^3.0.4",
+    "@zxcvbn-ts/core": "^4.1.2",
     "@zxcvbn-ts/language-common": "^3.0.4",
     "classnames": "^2.5.1",
     "date-fns": "^4.4.0",
