@@ -10,8 +10,8 @@ use std::collections::BTreeMap;
 use async_trait::async_trait;
 use chrono::{DateTime, Utc};
 use mas_data_model::{
-    AuthorizationCode, AuthorizationGrant, AuthorizationGrantStage, BrowserSession, Client, Clock, Pkce, Session,
-    UlidExt as _,
+    AuthorizationCode, AuthorizationGrant, AuthorizationGrantStage, BrowserSession, Client, Clock,
+    Pkce, Session, UlidExt as _,
 };
 use mas_iana::oauth::PkceCodeChallengeMethod;
 use mas_storage::oauth2::OAuth2AuthorizationGrantRepository;
