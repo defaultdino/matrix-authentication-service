@@ -1287,7 +1287,7 @@ mod tests {
                 None,
                 None,
                 vec!["https://static.example.com/redirect".parse().unwrap()],
-                false
+                false,
             )
             .await
             .unwrap();
