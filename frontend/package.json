@@ -29,7 +29,7 @@
     "@zxcvbn-ts/core": "^3.0.4",
     "@zxcvbn-ts/language-common": "^3.0.4",
     "classnames": "^2.5.1",
-    "date-fns": "^4.3.0",
+    "date-fns": "^4.4.0",
     "i18next": "^26.3.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
