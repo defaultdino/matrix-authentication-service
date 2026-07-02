@@ -93,7 +93,7 @@ dependencies = [
  "cfg-if",
  "http",
  "indexmap 2.14.0",
- "schemars 1.1.0",
+ "schemars 1.2.1",
  "serde",
  "serde_json",
  "serde_qs",
@@ -3324,7 +3324,7 @@ dependencies = [
  "rand 0.8.5",
  "rand_chacha 0.3.1",
  "rustls-pki-types",
- "schemars 1.1.0",
+ "schemars 1.2.1",
  "serde",
  "serde_json",
  "serde_with",
@@ -3445,7 +3445,7 @@ dependencies = [
  "reqwest",
  "ruma-common",
  "rustls",
- "schemars 1.1.0",
+ "schemars 1.2.1",
  "sentry",
  "serde",
  "serde_json",
@@ -3525,7 +3525,7 @@ dependencies = [
 name = "mas-iana"
 version = "1.20.0-rc.0"
 dependencies = [
- "schemars 1.1.0",
+ "schemars 1.2.1",
  "serde",
 ]
 
@@ -3565,7 +3565,7 @@ dependencies = [
  "rand 0.8.5",
  "rand_chacha 0.3.1",
  "rsa",
- "schemars 1.1.0",
+ "schemars 1.2.1",
  "sec1",
  "serde",
  "serde_json",
@@ -3700,7 +3700,7 @@ dependencies = [
  "mas-data-model",
  "oauth2-types",
  "opa-wasm",
- "schemars 1.1.0",
+ "schemars 1.2.1",
  "serde",
  "serde_json",
  "thiserror 2.0.17",
@@ -5374,9 +5374,9 @@ dependencies = [
 
 [[package]]
 name = "schemars"
-version = "1.1.0"
+version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9558e172d4e8533736ba97870c4b2cd63f84b382a3d6eb063da41b91cce17289"
+checksum = "a2b42f36aa1cd011945615b92222f6bf73c599a102a300334cd7f8dbeec726cc"
 dependencies = [
  "chrono",
  "dyn-clone",
@@ -5390,9 +5390,9 @@ dependencies = [
 
 [[package]]
 name = "schemars_derive"
-version = "1.1.0"
+version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "301858a4023d78debd2353c7426dc486001bddc91ae31a76fb1f55132f7e2633"
+checksum = "7d115b50f4aaeea07e79c1912f645c7513d81715d0420f8bc77a18c6260b307f"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -5751,7 +5751,7 @@ dependencies = [
  "indexmap 1.9.3",
  "indexmap 2.14.0",
  "schemars 0.9.0",
- "schemars 1.1.0",
+ "schemars 1.2.1",
  "serde_core",
  "serde_json",
  "serde_with_macros",
