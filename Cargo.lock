@@ -3855,7 +3855,7 @@ dependencies = [
  "tracing",
  "ulid",
  "url",
- "v_htmlescape",
+ "v_htmlescape 0.17.0",
  "walkdir",
 ]
 
@@ -3946,7 +3946,7 @@ dependencies = [
  "self_cell",
  "serde",
  "serde_json",
- "v_htmlescape",
+ "v_htmlescape 0.15.8",
 ]
 
 [[package]]
@@ -7014,10 +7014,25 @@ dependencies = [
 ]
 
 [[package]]
+name = "v_escape-base"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f1212fce830b75af194b578e55b3db9049f2c8c45f58d397fb25602fdb50fb3d"
+
+[[package]]
 name = "v_htmlescape"
 version = "0.15.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4e8257fbc510f0a46eb602c10215901938b5c2a7d5e70fc11483b1d3c9b5b18c"
+
+[[package]]
+name = "v_htmlescape"
+version = "0.17.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "befb3d53c9e3ec641417685896cbc8cc5bd264d6a2e190c56aaef1af24740d99"
+dependencies = [
+ "v_escape-base",
+]
 
 [[package]]
 name = "valuable"
@@ -7521,7 +7536,7 @@ version = "0.1.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c2a7b1c03c876122aa43f3020e6c3c3ee5c05081c9a00739faf7503aeba10d22"
 dependencies = [
- "windows-sys 0.48.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]

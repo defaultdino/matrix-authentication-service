@@ -712,7 +712,7 @@ version = "1.18.1"
 
 # HTML escaping
 [workspace.dependencies.v_htmlescape]
-version = "0.15.8"
+version = "0.17.0"
 
 # Version information generation
 [workspace.dependencies.vergen-gitcl]
