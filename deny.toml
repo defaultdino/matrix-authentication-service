@@ -72,6 +72,10 @@ skip = [
     # cron depends on these old versions, chrono-tz is on phf 0.12
     { name = "phf", version = "0.11.3" },
     { name = "phf_shared", version = "0.11.3" },
+    # ruma-macros moved to toml 1.x, these still depend on the old versions
+    { name = "serde_html_form", version = "0.2.8" },  # axum-extra
+    { name = "toml_datetime", version = "0.6.11" },   # proc-macro-crate -> toml_edit
+    { name = "winnow", version = "0.7.13" },          # cron, toml_edit
     # hyper-util -> system-configuration depends on this old version
     { name = "core-foundation", version = "0.9.4" },
     # wasmtime pulls in older versions of these
