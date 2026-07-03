@@ -159,7 +159,7 @@ version = "0.9.0"
 
 # Terminal formatting
 [workspace.dependencies.console]
-version = "0.15.11"
+version = "0.16.3"
 
 # Cookie store
 [workspace.dependencies.cookie_store]
@@ -206,7 +206,7 @@ features = ["std"]
 
 # Interactive CLI dialogs
 [workspace.dependencies.dialoguer]
-version = "0.11.0"
+version = "0.12.0"
 default-features = false
 features = ["fuzzy-select", "password"]
 
@@ -335,7 +335,7 @@ version = "2.0.6"
 
 # Snapshot testing
 [workspace.dependencies.insta]
-version = "1.46.3"
+version = "1.48.0"
 features = ["yaml", "json"]
 
 # IP network address types
