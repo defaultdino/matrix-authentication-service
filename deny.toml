@@ -68,9 +68,9 @@ skip = [
     { name = "heck", version = "0.4.1" },
     # pad depends on an old version
     { name = "unicode-width", version = "0.1.14" },
-    # cron depends on this old version
-    # https://github.com/zslayton/cron/pull/137
-    { name = "winnow", version = "0.6.26" },
+    # cron depends on these old versions, chrono-tz is on phf 0.12
+    { name = "phf", version = "0.11.3" },
+    { name = "phf_shared", version = "0.11.3" },
     # hyper-util -> system-configuration depends on this old version
     { name = "core-foundation", version = "0.9.4" },
     # wasmtime pulls in older versions of these
