@@ -193,7 +193,7 @@ version = "3.3.0"
 
 # Cron expressions
 [workspace.dependencies.cron]
-version = "0.15.0"
+version = "0.17.0"
 
 # CSV parsing and writing
 [workspace.dependencies.csv]
