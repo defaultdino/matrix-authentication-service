@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       '@localazy/cli':
-        specifier: ^2.0.10
-        version: 2.0.10
+        specifier: ^2.0.11
+        version: 2.0.11
       semver:
         specifier: ^7.8.4
         version: 7.8.5
@@ -1074,8 +1074,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@localazy/cli@2.0.10':
-    resolution: {integrity: sha512-ZOklioorP0vHnPFkcYyfqZXj1WJfFMMpRMzaFfe+QCD0qiXByckyadFc5Rldo+4j6CK7T5ajE4Vr26TLu2rwkQ==}
+  '@localazy/cli@2.0.11':
+    resolution: {integrity: sha512-Mzz2TlWqAfNGJmyO+qKlyY7nk4QycwSWODh0tOi+AlZUSJREbX9Wg1HAIKuG5pnlj7JYIv2NWRR1T+pZhdxuDw==}
     engines: {node: '>=18.20.7', npm: '>=6.0.0'}
     hasBin: true
 
@@ -5695,7 +5695,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@localazy/cli@2.0.10':
+  '@localazy/cli@2.0.11':
     dependencies:
       '@sinonjs/text-encoding': 0.7.2
       ws: 8.18.0
