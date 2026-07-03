@@ -345,7 +345,7 @@ features = ["serde"]
 
 # Iterator utilities
 [workspace.dependencies.itertools]
-version = "0.14.0"
+version = "0.15.0"
 
 # K256 elliptic curve
 [workspace.dependencies.k256]
