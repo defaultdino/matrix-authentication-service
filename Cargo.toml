@@ -74,7 +74,7 @@ syn2mas = { path = "./crates/syn2mas", version = "=1.20.0-rc.0" }
 
 # OpenAPI schema generation and validation
 [workspace.dependencies.aide]
-version = "0.15.1"
+version = "=0.16.0-alpha.4"
 features = ["axum", "axum-extra", "axum-extra-query", "axum-json", "macros"]
 
 # An `Arc` that can be atomically updated
@@ -104,16 +104,16 @@ version = "1.5.0"
 
 # HTTP router
 [workspace.dependencies.axum]
-version = "0.8.6"
+version = "0.8.9"
 
 # Extra utilities for Axum
 [workspace.dependencies.axum-extra]
-version = "0.10.3"
+version = "0.12.6"
 features = ["cookie-private", "cookie-key-expansion", "typed-header", "query"]
 
 # Axum macros
 [workspace.dependencies.axum-macros]
-version = "0.5.0"
+version = "0.5.1"
 
 # AEAD (Authenticated Encryption with Associated Data)
 [workspace.dependencies.aead]
@@ -159,7 +159,7 @@ version = "0.9.0"
 
 # Terminal formatting
 [workspace.dependencies.console]
-version = "0.15.11"
+version = "0.16.3"
 
 # Cookie store
 [workspace.dependencies.cookie_store]
@@ -193,7 +193,7 @@ version = "3.3.0"
 
 # Cron expressions
 [workspace.dependencies.cron]
-version = "0.15.0"
+version = "0.17.0"
 
 # CSV parsing and writing
 [workspace.dependencies.csv]
@@ -206,7 +206,7 @@ features = ["std"]
 
 # Interactive CLI dialogs
 [workspace.dependencies.dialoguer]
-version = "0.11.0"
+version = "0.12.0"
 default-features = false
 features = ["fuzzy-select", "password"]
 
@@ -335,7 +335,7 @@ version = "2.0.6"
 
 # Snapshot testing
 [workspace.dependencies.insta]
-version = "1.46.3"
+version = "1.48.0"
 features = ["yaml", "json"]
 
 # IP network address types
@@ -345,7 +345,7 @@ features = ["serde"]
 
 # Iterator utilities
 [workspace.dependencies.itertools]
-version = "0.14.0"
+version = "0.15.0"
 
 # K256 elliptic curve
 [workspace.dependencies.k256]
@@ -383,12 +383,12 @@ version = "0.3.17"
 
 # Templates
 [workspace.dependencies.minijinja]
-version = "2.15.1"
+version = "2.21.0"
 features = ["urlencode", "loader", "json", "speedups", "unstable_machinery"]
 
 # Additional filters for minijinja
 [workspace.dependencies.minijinja-contrib]
-version = "2.12.0"
+version = "2.21.0"
 features = ["pycompat"]
 
 # Utilities to deal with non-zero values
@@ -528,7 +528,7 @@ version = "2.1.1"
 
 # Matrix-related types
 [workspace.dependencies.ruma-common]
-version = "0.16.0"
+version = "0.19.0"
 
 # TLS stack
 [workspace.dependencies.rustls]
@@ -540,11 +540,11 @@ version = "1.13.0"
 
 # systemd service status notification
 [workspace.dependencies.sd-notify]
-version = "0.4.5"
+version = "0.5.0"
 
 # JSON Schema generation
 [workspace.dependencies.schemars]
-version = "0.9.0"
+version = "1.0.4"
 features = ["url2", "chrono04", "preserve_order"]
 
 # SEC1 encoding format
@@ -712,7 +712,7 @@ version = "1.18.1"
 
 # HTML escaping
 [workspace.dependencies.v_htmlescape]
-version = "0.15.8"
+version = "0.17.0"
 
 # Version information generation
 [workspace.dependencies.vergen-gitcl]
