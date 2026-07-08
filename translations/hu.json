@@ -102,13 +102,11 @@
         "description": "Elutasította a(z) %(client_name)s hozzáférését. Bezárhatja ezt az ablakot.",
         "heading": "Hozzáférés megtagadva"
       },
-      "description": "<strong>Egy másik eszköz</strong>, hozzá akarja kapcsolni a(z) %(client_name)s (<span>%(client_uri)s</span>) eszközt az Ön <span>%(server_name)s</span>-fiókjához. Győződjön meg róla, hogy felismeri ezt az eszközt.",
       "grant_access": "Hozzáférés engedélyezése",
       "granted": {
         "description": "Megadta a(z) %(client_name)s hozzáférését. Bezárhatja ezt az ablakot.",
         "heading": "Hozzáférés megadva"
       },
-      "this_will_setup": "Egy másik eszköz szeretné beállítani a(z) %(client_name)s klienst (<span>%(client_uri)s</span>) a(z) <span>%(server_name)s</span> fiókjával. Győződjön meg arról, hogy felismeri az eszközt.",
       "title": "Hozzáférést ad a fiókjához?",
       "warning": {
         "description": "Biztos, hogy ez az Ön eszköze? A rendszergazdák vagy az IT-támogatás sosem kérné arra, hogy fogadja ezt el.",

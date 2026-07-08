@@ -102,13 +102,11 @@
         "description": "Vous avez refusé l'accès à %(client_name)s. Vous pouvez fermer cette fenêtre.",
         "heading": "Accès refusé"
       },
-      "description": "<strong>Un autre appareil</strong> souhaite associer %(client_name)s (<span>%(client_uri)s</span>) avec votre compte <span>%(server_name)s</span>. Assurez-vous de reconnaître cet appareil.",
       "grant_access": "Accorder l'accès",
       "granted": {
         "description": "Vous avez accordé l'accès à %(client_name)s. Vous pouvez fermer cette fenêtre.",
         "heading": "Accès accordé"
       },
-      "this_will_setup": "Un autre appareil souhaite connecter %(client_name)s (<span>%(client_uri)s</span>) avec votre compte <span>%(server_name)s</span>. Assurez-vous de reconnaître cet appareil.",
       "title": "Autoriser l'accès à votre compte ?",
       "warning": {
         "description": "Êtes-vous sûr qu'il s'agit bien de votre appareil ? Les administrateurs du service ou le support informatique ne vous demanderaient jamais de confirmer cela.",

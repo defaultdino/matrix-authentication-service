@@ -102,13 +102,11 @@
         "description": "Odepřeli jste přístup k %(client_name)s. Toto okno můžete zavřít.",
         "heading": "Přístup odepřen"
       },
-      "description": "<strong>Další zařízení</strong> chce propojit %(client_name)s (<span>%(client_uri)s</span>) s vaším účtem <span>%(server_name)s</span>. Ujistěte se, že toto zařízení poznáváte.",
       "grant_access": "Udělit přístup",
       "granted": {
         "description": "Udělili jste přístup k %(client_name)s. Toto okno můžete zavřít.",
         "heading": "Přístup udělen"
       },
-      "this_will_setup": "Jiné zařízení chce nastavit %(client_name)s (<span>%(client_uri)s</span>) s vaším <span>%(server_name)s</span> účtem. Ujistěte se, že dané zařízení poznáváte.",
       "title": "Udělit přístup k vašemu účtu?",
       "warning": {
         "description": "Jste si jisti, že se jedná o vaše zařízení? Správci ani technická podpora by vás nikdy nepožádali o souhlas.",

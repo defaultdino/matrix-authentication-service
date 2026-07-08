@@ -102,13 +102,11 @@
         "description": "你已拒绝 %(client_name)s 的访问。你可以关闭此窗口。",
         "heading": "访问被拒绝"
       },
-      "description": "<strong>另一设备</strong>想要关联你位于 <span>%(server_name)s</span> 上的账户： %(client_name)s（<span>%(client_uri)s</span>），请确保你认识该设备。",
       "grant_access": "授予访问权",
       "granted": {
         "description": "你已授予 %(client_name)s 访问权限。可以关闭此窗口。",
         "heading": "已授予访问权限"
       },
-      "this_will_setup": "另一设备尝试使用你在上的账户 <span>%(server_name)s</span> 配置 %(client_name)s（<span>%(client_uri)s</span>）。请确保你认识该设备。",
       "title": "允许其访问你的账户？",
       "warning": {
         "description": "是否确定这是你的设备？管理员或 IT 支持人员绝不会要求你同意。",

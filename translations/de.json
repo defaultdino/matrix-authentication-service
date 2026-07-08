@@ -102,13 +102,11 @@
         "description": "Du hast den Zugriff auf %(client_name)s abgelehnt. Du kannst dieses Fenster jetzt schließen.",
         "heading": "Zugriff verweigert"
       },
-      "description": "<strong>Ein anderes Gerät</strong> möchte %(client_name)s (<span>%(client_uri)s</span>) mit deinem <span>%(server_name)s</span> Konto verknüpfen. Bitte stelle sicher, dass du dieses Gerät erkennst.",
       "grant_access": "Zugriff gewähren",
       "granted": {
         "description": "Du hast %(client_name)s Zugriff gegeben. Du kannst dieses Fenster jetzt schließen.",
         "heading": "Zugriff gewährt"
       },
-      "this_will_setup": "Ein anderes Gerät möchte %(client_name)s (<span>%(client_uri)s</span>) mit deinem <span>%(server_name)s</span> Konto einrichten. Stelle sicher, dass du dieses Gerät kennst.",
       "title": "Zugriff auf dein Konto gewähren?",
       "warning": {
         "description": "Bist du sicher, dass dies dein Gerät ist? Administratoren oder der IT-Support würden dich niemals bitten, dies zu akzeptieren.",
