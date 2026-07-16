@@ -42,21 +42,10 @@ const l33tTable = {
   z: ["2"],
 };
 
-// The ESM build of @zxcvbn-ts/language-common nests the graphs under a `default`
-// export its type declarations don't advertise, so the top-level qwerty/dvorak/…
-// read as `undefined`. Feeding those to zxcvbn crashes its spatial matcher and
-// silently disables password strength, so unwrap `default` when it's there.
-// See https://github.com/zxcvbn-ts/zxcvbn/issues/329
-const adjacencyGraphs =
-  (
-    zxcvbnCommonPackage.adjacencyGraphs as typeof zxcvbnCommonPackage.adjacencyGraphs & {
-      default?: typeof zxcvbnCommonPackage.adjacencyGraphs;
-    }
-  ).default ?? zxcvbnCommonPackage.adjacencyGraphs;
-
 // These are the same keyboard adjacency graphs as from zxcvbn-rs.
 // I haven't checked both libraries thoroughly for accuracy
-const { qwerty, dvorak, keypad, keypadMac } = adjacencyGraphs;
+const { qwerty, dvorak, keypad, keypadMac } =
+  zxcvbnCommonPackage.adjacencyGraphs;
 
 // These are the options for zxcvbn-ts to make it behave as close to zxcvbn-rs
 // as I can manage. In practice there is still a small divergence.
