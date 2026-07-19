@@ -339,10 +339,6 @@ pub(crate) async fn post(
 
     repo.save().await?;
 
-    activity_tracker
-        .record_browser_session(&clock, &browser_session)
-        .await;
-
     Ok((
         cookie_jar,
         callback_destination.go(&templates, &locale, params)?,

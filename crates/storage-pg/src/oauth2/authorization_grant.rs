@@ -88,6 +88,15 @@ impl TryFrom<GrantLookup> for AuthorizationGrant {
                     fulfilled_at,
                 }
             }
+            (Some(fulfilled_at), None, None, None, None) => {
+                tracing::warn!(
+                    grant.id = %id,
+                    "Grant was fulfilled without a user_session_id, it will be treated as cancelled"
+                );
+                AuthorizationGrantStage::Cancelled {
+                    cancelled_at: fulfilled_at,
+                }
+            }
             (
                 Some(fulfilled_at),
                 Some(exchanged_at),

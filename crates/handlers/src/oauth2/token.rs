@@ -18,8 +18,8 @@ use mas_axum_utils::{
     record_error,
 };
 use mas_data_model::{
-    AuthorizationGrantStage, BoxClock, BoxRng, Client, Clock, Device, DeviceCodeGrantState,
-    SiteConfig, TokenType,
+    AuthorizationGrantStage, BoxClock, BoxRng, BrowserSession, Client, Clock, Device,
+    DeviceCodeGrantState, SiteConfig, TokenType,
 };
 use mas_i18n::DataLocale;
 use mas_keystore::{Encrypter, Keystore};
@@ -516,6 +516,7 @@ async fn authorization_code_grant(
         .browser_session()
         .lookup(browser_session_id)
         .await?
+        .filter(BrowserSession::active) // this treats inactive sessions as 'no such browser session' errors
         .ok_or(RouteError::NoSuchBrowserSession(browser_session_id))?;
 
     let lang: DataLocale = authz_grant.locale.as_deref().unwrap_or("en").parse()?;
