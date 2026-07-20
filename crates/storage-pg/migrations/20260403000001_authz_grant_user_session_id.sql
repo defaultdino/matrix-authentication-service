@@ -6,6 +6,5 @@
 ALTER TABLE "oauth2_authorization_grants"
   ADD COLUMN "user_session_id" UUID
     CONSTRAINT "oauth2_authorization_grants_user_session_id_fkey"
-    REFERENCES "user_sessions" ("user_session_id");
-
-CREATE INDEX "oauth2_authorization_grants_user_session_id_idx" ON "oauth2_authorization_grants" (user_session_id);
+    REFERENCES "user_sessions" ("user_session_id")
+    ON DELETE SET NULL;
