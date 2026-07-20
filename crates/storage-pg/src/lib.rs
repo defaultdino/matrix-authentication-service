@@ -1,3 +1,4 @@
+// Copyright 2025, 2026 Element Creations Ltd.
 // Copyright 2024, 2025 New Vector Ltd.
 // Copyright 2021-2024 The Matrix.org Foundation C.I.C.
 //
@@ -23,6 +24,7 @@
 //! # use ulid::Ulid;
 //! # use rand::RngCore;
 //! # use mas_data_model::Clock;
+//! # use mas_data_model::UlidExt;
 //! # use mas_storage_pg::{DatabaseError, ExecuteExt};
 //! # use sqlx::PgConnection;
 //! # use uuid::Uuid;
@@ -118,7 +120,7 @@
 //!         clock: &dyn Clock,
 //!     ) -> Result<FakeData, Self::Error> {
 //!         let created_at = clock.now();
-//!         let id = Ulid::from_datetime_with_source(created_at.into(), rng);
+//!         let id = Ulid::from_datetime_with_rng(created_at, rng);
 //!         tracing::Span::current().record("fake_data.id", tracing::field::display(id));
 //!
 //!         // Note: here we would use the macro version instead, but it's not possible here in
@@ -186,6 +188,7 @@ pub(crate) mod policy_data;
 pub(crate) mod repository;
 pub(crate) mod telemetry;
 pub(crate) mod tracing;
+pub(crate) mod ulid_at;
 
 pub(crate) use self::errors::DatabaseInconsistencyError;
 pub use self::{
