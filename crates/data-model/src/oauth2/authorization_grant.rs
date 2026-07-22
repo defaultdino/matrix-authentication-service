@@ -67,7 +67,6 @@ pub enum AuthorizationGrantStage {
     },
     Exchanged {
         session_id: Ulid,
-        browser_session_id: Ulid,
         fulfilled_at: DateTime<Utc>,
         exchanged_at: DateTime<Utc>,
     },
@@ -104,12 +103,11 @@ impl AuthorizationGrantStage {
         match self {
             Self::Fulfilled {
                 fulfilled_at,
-                browser_session_id,
+                browser_session_id: _,
             } => Ok(Self::Exchanged {
                 fulfilled_at,
                 exchanged_at,
                 session_id: session.id,
-                browser_session_id,
             }),
             _ => Err(InvalidTransitionError),
         }

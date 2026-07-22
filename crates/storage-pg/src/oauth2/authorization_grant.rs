@@ -97,21 +97,13 @@ impl TryFrom<GrantLookup> for AuthorizationGrant {
                     cancelled_at: fulfilled_at,
                 }
             }
-            (Some(fulfilled_at), None, None, None, None) => AuthorizationGrantStage::Cancelled {
-                cancelled_at: fulfilled_at,
-            },
-            (
-                Some(fulfilled_at),
-                Some(exchanged_at),
-                None,
-                Some(browser_session_id),
-                Some(session_id),
-            ) => AuthorizationGrantStage::Exchanged {
-                session_id: session_id.into(),
-                browser_session_id: browser_session_id.into(),
-                fulfilled_at,
-                exchanged_at,
-            },
+            (Some(fulfilled_at), Some(exchanged_at), None, _, Some(session_id)) => {
+                AuthorizationGrantStage::Exchanged {
+                    session_id: session_id.into(),
+                    fulfilled_at,
+                    exchanged_at,
+                }
+            }
             (None, None, Some(cancelled_at), None, None) => {
                 AuthorizationGrantStage::Cancelled { cancelled_at }
             }
